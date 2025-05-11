@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Step Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#section1">Home</a>
+    <a href="#section2">About</a>
+  </nav>
+
+  <!-- Section 1 -->
+  <section id="section1">
+    <h1>Welcome</h1>
+    <p>Introductory content here.</p>
+  </section>
+
+  <!-- Section 2 with Multi-Step Form -->
+  <section id="section2">
+    <h2>Sign Up</h2>
+    <form id="multiStepForm">
+      <!-- Step 1 -->
+      <div class="form-step active">
+        <label>Name:</label>
+        <input type="text" required />
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step">
+        <label>Email:</label>
+        <input type="email" required />
+        <button type="button" class="prev">Back</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <!-- Progress Indicators -->
+    <div class="progress-bar">
+      <span class="step-indicator active"></span>
+      <span class="step-indicator"></span>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
